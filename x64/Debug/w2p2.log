@@ -10,8 +10,12 @@ C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Works
 C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(93,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(95,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
 C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(109,42): warning C4244: 'function': conversion from 'double' to 'float', possible loss of data
-C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(130,35): warning C4305: 'function': truncation from 'double' to 'float'
 C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(109,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(111,28): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(113,32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(112,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(123,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(130,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(137,30): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(141,32): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\w2p2.c(145,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   w2p2.vcxproj -> C:\Users\reged\Documents\Seneca\IPC 144\3. Week 1 Jan 11 2023\IPC WORK\IPC-Workshops-master\WS02\p2\x64\Debug\w2p2.exe

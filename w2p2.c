@@ -109,26 +109,46 @@ int main(void)
         int toonies = round_lab(subTotal / 2);
 
         int sub = subTotal * 100;
-        
-        float remainder1 = sub % 200;
+        float remainder = sub % 200;
+        remainder /= 100;
         //int remainders1 = ((remainder1 + 0.005) * 100);
         
         printf("Sales EXCLUDING tax\n");
         printf("Coin     Qty   Balance\n");
         printf("-------- --- ---------\n");
         printf("%22.4lf\n", subTotal);
-        printf("Toonie   %d    %.4f\n",toonies, remainder1 / 100);
+        printf("Toonie   %d    %.4f\n",toonies, remainder);
 
        
-      /*  int loonies = remainders1 / 10000.0 / 1;
-        int remainder2 = (int)remainder1 % 1;
+        int loonies = remainder;
+        remainder = remainder - loonies;
+        
 
 
-        printf("Loonies %d %.4d\n", loonies, remainder1/100);
-        */
+        printf("Loonies %d %.4f\n", loonies, remainder);
 
-        float r = round_lab(12.343);
-       
-        printf("%f\n", r);
+        int quarters = remainder * 100;
+        quarters /= 25;
+        float diff = (((float)quarters * 25) / 100);
+        remainder = remainder - diff;
+
+        printf("Quaerters   %d    %.4f\n", quarters, remainder);
+
+        int dimes = remainder/0.10;
+        remainder = remainder;
+        printf("Dimes %d     %.4f\n", dimes, remainder);
+
+        int nickels = remainder/0.05;
+        remainder = remainder;
+        printf("Nickels %d    %.4f\n", nickels, remainder);
+
+        float pennies = round_lab(remainder) * 100.0;
+        remainder = 0.000;
+
+        printf("Pennies %d   %.4f\n", (int)pennies, remainder);
+        
+
+
+        
         return 0;
 }
