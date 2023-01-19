@@ -21,6 +21,14 @@ float round_lab(float num) {
     return d / 100.0;
 }
 
+float toMoney(float num){
+    return num / 100;
+}
+
+int toFloatInt(float num){
+    return num * 100;
+}
+
 
 int main(void)
 {
@@ -107,48 +115,42 @@ int main(void)
 
         //determine the toonies
         int toonies = round_lab(subTotal / 2);
-
-        int sub = subTotal * 100;
-        float remainder = sub % 200;
-        remainder /= 100;
-        //int remainders1 = ((remainder1 + 0.005) * 100);
+        int sub = round_lab(subTotal) * 100;
+        int remainder = sub % 200;
         
         printf("Sales EXCLUDING tax\n");
         printf("Coin     Qty   Balance\n");
         printf("-------- --- ---------\n");
         printf("%22.4lf\n", subTotal);
-        printf("Toonie   %d    %.4f\n",toonies, remainder);
+        printf("Toonie   %d    %.4f\n",toonies, toMoney(remainder));
 
-       
-        int loonies = remainder;
-        remainder = remainder - loonies;
-        
+       //Loonies
+        int loonies = toMoney(remainder);
+        remainder = remainder - toFloatInt(loonies);
+    
+        printf("Loonies %d %.4f\n", loonies, toMoney(remainder));
 
+        //quarters
+        int quarters = remainder / 25;
+        remainder = remainder - (quarters * 25);
 
-        printf("Loonies %d %.4f\n", loonies, remainder);
+        printf("Quaerters   %d    %.4f\n", quarters, toMoney(remainder));
 
-        int quarters = remainder * 100;
-        quarters /= 25;
-        float diff = (((float)quarters * 25) / 100);
-        remainder = remainder - diff;
+        //Dimes
+        int dimes = remainder / 10;
+        remainder = remainder - (dimes * 10);
+        printf("Dimes %d     %.4f\n", dimes, toMoney(remainder));
 
-        printf("Quaerters   %d    %.4f\n", quarters, remainder);
+        //Nickels
+        int nickels = remainder / 5;
+        remainder = remainder - (nickels * 5);
+        printf("Nickels %d    %.4f\n", nickels, toMoney(remainder));
 
-        int dimes = remainder/0.10;
-        remainder = remainder;
-        printf("Dimes %d     %.4f\n", dimes, remainder);
+        //Pennies
+        int pennies = remainder;
+        remainder = 0;
 
-        int nickels = remainder/0.05;
-        remainder = remainder;
-        printf("Nickels %d    %.4f\n", nickels, remainder);
-
-        float pennies = round_lab(remainder) * 100.0;
-        remainder = 0.000;
-
-        printf("Pennies %d   %.4f\n", (int)pennies, remainder);
-        
-
-
+        printf("Pennies %d   %9.4f\n", pennies, toMoney(remainder));
         
         return 0;
 }
