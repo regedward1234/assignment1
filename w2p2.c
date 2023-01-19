@@ -16,6 +16,12 @@ piece of work is entirely of my own creation.
 
 #include <stdio.h>
 
+float round_lab(float num) {
+    int d = (num + 0.005) * 100;
+    return d / 100.0;
+}
+
+
 int main(void)
 {
     const double TAX = 0.13;
@@ -28,13 +34,14 @@ int main(void)
         printf("================\n");
 
         printf("Enter the price for a SMALL shirt: $");
-        scanf("%lf", &s);
-
+        //scanf("%lf", &s);
+        s = 17.96;
         printf("Enter the price for a MEDIUM shirt: $");
-        scanf("%lf", &m);
-
+        //scanf("%lf", &m);
+        m = 26.96;
         printf("Enter the price for a LARGE shirt: $");
-        scanf("%lf", &l);
+        //scanf("%lf", &l);
+        l = 35.97;
 
         printf("Shirt Store Price List\n");
         printf("======================\n");
@@ -44,17 +51,20 @@ int main(void)
 
         printf("Patty's shirt size is '%c'\n", patSize);
         printf("Number of shirts Patty is buying: ");
-        scanf("%d", &patShirts);
+        //scanf("%d", &patShirts);
+        patShirts = 6;
         printf("\n");
 
         printf("Tommy's shirt size is '%c'\n", tomSize);
         printf("Number of shirts Tommy is buying: ");
-        scanf("%d", &tomShirts);
+        //scanf("%d", &tomShirts);
+        tomShirts = 3;
         printf("\n");
 
         printf("Sally's shirt size is '%c'\n", salSize);
         printf("Number of shirts Sally is buying: ");
-        scanf("%d", &salShirts);
+        //scanf("%d", &salShirts);
+        salShirts = 4;
         printf("\n");
 
         // Calculations for PAT
@@ -96,16 +106,18 @@ int main(void)
         printf("=======================================\n\n");
 
         //determine the toonies
+        int toonies = round_lab(subTotal / 2);
+
         int sub = subTotal * 100;
-        int toonies = sub / 200;
+        
         float remainder1 = sub % 200;
-        int remainders1 = ((remainder1 + 0.005) * 100);
+        //int remainders1 = ((remainder1 + 0.005) * 100);
         
         printf("Sales EXCLUDING tax\n");
         printf("Coin     Qty   Balance\n");
         printf("-------- --- ---------\n");
         printf("%22.4lf\n", subTotal);
-        printf("Toonie   %d    %.4f\n",toonies,remainders1/100.0);
+        printf("Toonie   %d    %.4f\n",toonies, remainder1 / 100);
 
        
       /*  int loonies = remainders1 / 10000.0 / 1;
@@ -115,14 +127,8 @@ int main(void)
         printf("Loonies %d %.4d\n", loonies, remainder1/100);
         */
 
-
-
-
-
-
-
-     
-
-
+        float r = round_lab(12.343);
+       
+        printf("%f\n", r);
         return 0;
 }
